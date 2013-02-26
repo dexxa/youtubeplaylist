@@ -62,7 +62,7 @@
       this._protocol = (this.options.secure === 'auto') ? window.location.protocol === 'https:' ? 'https://' : 'http://' :
         this.options.secure ? 'https://' : 'http://';
       this._autoPlay = (this.options.autoPlay) ? '&autoplay=1' : '';
-      this._showRelated = (this.options.showRelated) ? '&rel=1' : '';
+      this._showRelated = '&rel=' + ((this.options.showRelated) ? '1' : '0');
       this._fullscreen = (this.options.allowFullScreen) ? '&fs=1' : '';
       this.init();
   }
